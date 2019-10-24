@@ -1,10 +1,33 @@
 <template>
     <div class="login">
         <LoginHeader>
-            <el-form slot="container">
+            <el-form :model="ruleForm" label-position="left" label-width="0px" slot="container">
                 <div class="title">
                    <h3>账号密码登录</h3> 
                 </div>
+                <!-- username -->
+                <el-form-item>
+                    <el-input type="text" v-model="ruleForm.username" 
+                    auto-complete="off" placeholder="账号">
+                        <i slot="prefix" class="fa fa-user-o"></i>
+                    </el-input>
+                </el-form-item>
+                <!-- password -->
+                <el-form-item>
+                    <el-input type="password" v-model="ruleForm.pwd" 
+                    auto-complete="off" placeholder="密码">
+                        <i slot="prefix" class="fa fa-lock"></i>
+                    </el-input>
+                </el-form-item>
+                <!-- 登录button -->
+                <el-form-item>
+                    <el-button type="primary" style="width:100%">登录</el-button>
+                </el-form-item>
+                <!-- 7天自动登录和忘记密码 -->
+                <el-form-item>
+                    <el-checkbox v-model="ruleForm.autoLogin" :checked="ruleForm.autoLogin">7天内自动登录</el-checkbox>
+                    <el-button type="text" class="forget">忘记密码</el-button>
+                </el-form-item>
             </el-form>
         </LoginHeader>
     </div>
@@ -29,15 +52,6 @@ export default class Login extends Vue {
         pwd: "",
         autoLogin: true //是否自动登录
     };
-    data(){
-        return {
-            users:{
-                username: "",
-                pwd: "",
-                autoLogin: true
-            }
-        }
-    }
 }
 </script>
 
