@@ -13,7 +13,8 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "./../element-ui/types"
+      "./node_modules/element-ui/types",
+      "./node_modules/vue/types"
     ],
     "paths": {
       "@/*": [
