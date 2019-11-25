@@ -3,6 +3,7 @@ declare module '*.vue' {
   export default Vue
 }
 
+
 // 声明全局方法
 declare module 'vue/types/vue' {
   import VueRouter, {Route} from 'vue-router'

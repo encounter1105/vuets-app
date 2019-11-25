@@ -44,6 +44,8 @@ import LoginHeader from './LoginHeader.vue'
     components:{ LoginHeader }
 })    
 export default class Password extends Vue {
+    
+
     @Provide() loading:boolean = false;  //是否发起网络请求
     @Provide() ruleForm:{username:string;email:string; } = {
         username: "",
@@ -73,6 +75,7 @@ export default class Password extends Vue {
                 .post("/api/users/findPwd",
                 this.ruleForm)
                 .then((res:any) => {
+                    console.log(this)
                     this.loading = false
                     // console.log(res.data);
                     this.$message({
