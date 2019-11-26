@@ -11,9 +11,11 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "noImplicitThis": false,
     "types": [
       "webpack-env",
       "./../element-ui/types"
+      // "./node_modules/_element-ui@2.12.0@element-ui/types"
     ],
     "paths": {
       "@/*": [

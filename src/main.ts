@@ -8,6 +8,7 @@ import axios  from '@/utils/http.ts'
 
 Vue.use(ElementUI);
 
+
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios;
 
