@@ -80,7 +80,7 @@ export default class Password extends Vue {
                     this.loading = false
                     // console.log(res.data);
                     console.log(this)
-                    this['$message']({
+                    this.$message({
                         type: "success",
                         message:res.data.msg,
             

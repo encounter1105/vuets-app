@@ -1,10 +1,4 @@
 module.exports = {
-  chainWebpack: (config) => {
-    // 配置别名
-    config.extensions = ['.js', '.ts', '.vue'];
-    config.resolve.alias
-      .set('@', resolve('src'))
-  }, 
   // 反向代理
   devServer: {
     open: true,
