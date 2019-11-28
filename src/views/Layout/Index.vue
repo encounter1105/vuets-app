@@ -4,16 +4,21 @@
     <LayoutHeader/>
 
     <!-- 内容 -->
+    <Content>
+        <router-view slot="content"></router-view>
+    </Content>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import LayoutHeader from './LayoutHeader.vue'
+import LayoutHeader from './LayoutHeader.vue';
+import Content from './Content.vue'
 
 @Component({
   components: {
-      LayoutHeader
+      LayoutHeader,
+      Content
   }
 })
 export default class Layout extends Vue {}
