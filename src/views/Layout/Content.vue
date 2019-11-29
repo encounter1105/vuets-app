@@ -3,7 +3,6 @@
       <!-- 左侧菜单 -->
       <el-aside width="200px">
           <slot name="left"></slot>
-
       </el-aside>
       <!-- 右侧页面 -->
       <el-main>
